@@ -1,0 +1,39 @@
+﻿<Window x:Class="BG3ModdingUtil.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BG3ModdingUtil"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal"
+        Title="MainWindow"
+        Width="500"
+        Height="350">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 0, 15">
+               <Label Content="Game is located at:    " HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/> 
+               <TextBox IsReadOnly="True" Text="{Binding SteamFolder}" Width="250" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </StackPanel>            
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Content="Vanilla" Command="{Binding VanillaClick}" Height="100" Width="200" Margin="0, 0, 50, 0"/>
+                <StackPanel Orientation="Vertical">
+                    <Button Content="Modded" Command="{Binding ModdedClick}" Height="70" Width="200"/>
+                    <ComboBox Height="30" ItemsSource="{Binding ModListList}" SelectedItem="{Binding ModList, Mode=TwoWay}"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 15, 0, 0">
+                <CheckBox IsChecked="{Binding IncludeReshade}"/> 
+                <Label Content="Include Reshade in Vanilla" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 15, 0, 0">
+                <CheckBox IsChecked="{Binding IncludeRoot}"/> 
+                <Label Content="Include Party Size and Camera in Vanilla (Includes Reshade)" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <Button Content="Test" Command="{Binding testclick}" Visibility="Collapsed"/>
+        <Label Content="{Binding LabelString}" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </StackPanel>
+        
+    </Grid>
+</Window>
