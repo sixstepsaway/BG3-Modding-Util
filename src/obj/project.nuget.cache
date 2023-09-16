@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JxoSbGCUuI1NF0Qmtw6hKvNO78K30Ir9qWD2zJta4nhDIidRO4MA3Fuekw1fG6//husfDkR5aGb2YlSRktEvgg==",
+  "dgSpecHash": "PBeXescyalMO9MkHUfifCKyT3tdal3EsVoqNao1I+TVUj3t8Z87DJzOMLKI2L1f+iTPAH93FN0jUiFRy5roACA==",
   "success": true,
-  "projectFilePath": "I:\\Code\\C#\\BG3 Modding Utility\\BG3ModdingUtil\\BG3ModdingUtil.csproj",
+  "projectFilePath": "I:\\Code\\C#\\BG3 Modding Utility\\src\\BG3ModdingUtil.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

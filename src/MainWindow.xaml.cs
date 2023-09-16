@@ -131,12 +131,6 @@ namespace BG3ModdingUtil
             IncludeReshade = true;
             IncludeRoot = true;
             MoveReshadeFolder();
-            if (!File.Exists(bgexe)){
-                vfs.MakeSymbolicLink(bgexeSteam, Globals.GameDataBin);
-            }
-            if (!File.Exists(bgdxexe)){
-                vfs.MakeSymbolicLink(bgdxexeSteam, Globals.GameDataBin);
-            }
             LabelString = "";
         }
 
@@ -164,13 +158,16 @@ namespace BG3ModdingUtil
         }
 
         private void MoveReshadeFolder(){
-            string ScreenshotsFolder = System.IO.Path.Combine(Globals.ModDirectory, "Screenshots");
-            List<string> reshade = File.ReadAllLines(reshadeini).ToList();
-            string rs = reshade.Where(x => x.Contains("SavePath")).First();
-            int indx = reshade.IndexOf(rs);
-            reshade[indx] = string.Format("SavePath={0}", ScreenshotsFolder);
-            string[] arr = reshade.ToArray<string>();
-            File.WriteAllLines(reshadeini, arr);
+            if (File.Exists(reshadeini)){
+                string ScreenshotsFolder = System.IO.Path.Combine(Globals.ModDirectory, "Screenshots");
+                List<string> reshade = File.ReadAllLines(reshadeini).ToList();
+                string rs = reshade.Where(x => x.Contains("SavePath")).First();
+                int indx = reshade.IndexOf(rs);
+                reshade[indx] = string.Format("SavePath={0}", ScreenshotsFolder);
+                string[] arr = reshade.ToArray<string>();
+                File.WriteAllLines(reshadeini, arr);
+            }
+            
         }
 
 
