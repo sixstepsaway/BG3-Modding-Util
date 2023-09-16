@@ -1,6 +1,6 @@
 I made this for a friend in like eight hours before we played so we'd have the same BG3 modded setup for one game, but be able to continue playing our vanilla game vanilla. I figured it might be useful for someone else too for similar reasons. Please read instructions on how to use it, or it won't work!  
   
-![](https://i.imgur.com/qfLD9HW.png)
+![]([https://i.imgur.com/qfLD9HW.png](https://raw.githubusercontent.com/sixstepsaway/BG3-Modding-Util/main/MainWindow.png))
 The app comes with:  
 -   6 files in its root directory
 -   3 folders
