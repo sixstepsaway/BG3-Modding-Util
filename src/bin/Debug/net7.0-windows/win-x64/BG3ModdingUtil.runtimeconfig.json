@@ -1,0 +1,15 @@
+{
+  "runtimeOptions": {
+    "tfm": "net7.0",
+    "includedFrameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "7.0.10"
+      },
+      {
+        "name": "Microsoft.WindowsDesktop.App",
+        "version": "7.0.10"
+      }
+    ]
+  }
+}

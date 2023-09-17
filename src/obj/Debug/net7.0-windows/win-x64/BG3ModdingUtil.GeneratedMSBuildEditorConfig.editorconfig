@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BG3ModdingUtil
-build_property.ProjectDir = I:\Code\C#\BG3 Modding Utility\BG3ModdingUtil\
+build_property.ProjectDir = I:\Code\C#\BG3 Modding Utility\src\
