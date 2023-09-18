@@ -48,7 +48,7 @@ Don't rename the folders, don't rename the vanilla load order.
 -   Uncheck the checkboxes and click Vanilla. It will say "Successfully Removed All Mods". Go into Load Orders and copy vanilla.lsx. Go to %AppData%\Local\Larian Studios\Baldur's Gate 3\Player Profiles\public\. Delete modsettings.lsx. Paste vanilla.lsx in and rename it modsettings.lsx.      
 -   Delete BG3Config.cfg and the five BG3ModdingUtil files from wherever you put them. Continue however you like.  
 
-![](https://storage.ko-fi.com/cdn/kofi3.png)  
+![http://ko-fi.com/sixstepsaway](https://storage.ko-fi.com/cdn/kofi3.png)  
  
 ## Notes:
 -   If it throws an exception about permissions or just plain crashes, run it as an administrator. My friend had to, I didn't, I don't know why.
