@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using SSA.VirtualFileSystem;
 using System.Drawing.Text;
 using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 
 namespace BG3ModdingUtil
 {
@@ -32,7 +33,7 @@ namespace BG3ModdingUtil
         }
     }
 
-    public class Globals{
+    public class Globals {
         public static string AppLocalFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         public static string BG3Folder = System.IO.Path.Combine(AppLocalFolder, @"Larian Studios\Baldur's Gate 3");
         public static string BG3ModsFolder = System.IO.Path.Combine(BG3Folder, "Mods");        
@@ -47,6 +48,25 @@ namespace BG3ModdingUtil
         public static string SteamFolder = File.ReadAllText(System.IO.Path.Combine(ModDirectory, "BG3Config.cfg"));
         public static string SteamBINFolder = System.IO.Path.Combine(SteamFolder, "bin");
         public static string SteamDataFolder = System.IO.Path.Combine(SteamFolder, "Data");
+
+        public static void MakeExceptionReport(StringBuilder stringBuilder){
+            string logfolder = System.IO.Path.Combine(ModDirectory, "ErrorLogs");
+            if (!Directory.Exists(logfolder)){
+                Directory.CreateDirectory(logfolder);
+            }
+            DateTime now = DateTime.Now;
+            string dt = string.Format("{0}-{1}-{2}_{3}-{4}-{5}", now.Year.ToString(), now.Month.ToString(), now.Day.ToString(), now.Hour.ToString(), now.Minute.ToString(), now.Second.ToString());
+            string name = string.Format("BGMU_Exception_Report_{0}.log", dt);
+            string location = System.IO.Path.Combine(logfolder, name);
+            using (FileStream fileStream = new(location, FileMode.CreateNew)){
+                using (StreamWriter streamWriter = new(fileStream)){
+                    streamWriter.Write(stringBuilder.ToString());
+                    streamWriter.Flush();
+                    streamWriter.Close();
+                }
+                fileStream.Close();
+            }
+        }
     }
 
     public class MainViewModel : INotifyPropertyChanged

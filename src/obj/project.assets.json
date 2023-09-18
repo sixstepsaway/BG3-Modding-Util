@@ -1,8 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {},
-    "net7.0-windows7.0/win-x64": {}
+    "net7.0-windows7.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
@@ -15,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\Code\\C#\\BG3 Modding Utility\\src\\BG3ModdingUtil.csproj",
+      "projectUniqueName": "i:\\Code\\C#\\BG3 Modding Utility\\src\\BG3ModdingUtil.csproj",
       "projectName": "BG3ModdingUtil",
-      "projectPath": "I:\\Code\\C#\\BG3 Modding Utility\\src\\BG3ModdingUtil.csproj",
+      "projectPath": "i:\\Code\\C#\\BG3 Modding Utility\\src\\BG3ModdingUtil.csproj",
       "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
-      "outputPath": "I:\\Code\\C#\\BG3 Modding Utility\\src\\obj\\",
+      "outputPath": "i:\\Code\\C#\\BG3 Modding Utility\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,20 +62,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[7.0.10, 7.0.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[7.0.10, 7.0.10]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[7.0.10, 7.0.10]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -86,11 +71,6 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "win-x64": {
-        "#import": []
       }
     }
   }
