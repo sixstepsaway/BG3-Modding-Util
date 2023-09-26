@@ -1,0 +1,5 @@
+I:\Code\C#\BG3 Modding Utility\src\bin\Release\net7.0-windows\publish\BG3ModdingUtil.exe
+I:\Code\C#\BG3 Modding Utility\src\bin\Release\net7.0-windows\publish\BG3ModdingUtil.dll
+I:\Code\C#\BG3 Modding Utility\src\bin\Release\net7.0-windows\publish\BG3ModdingUtil.deps.json
+I:\Code\C#\BG3 Modding Utility\src\bin\Release\net7.0-windows\publish\BG3ModdingUtil.runtimeconfig.json
+I:\Code\C#\BG3 Modding Utility\src\bin\Release\net7.0-windows\publish\BG3ModdingUtil.pdb

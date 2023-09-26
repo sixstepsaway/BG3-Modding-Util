@@ -52,6 +52,7 @@ namespace SSA.VirtualFileSystem
         
         public void MakeSymbolicLink(string Original, string Destination){
             FileInfo fileInfo = new(Original);
+            FileInfo destinfo = new(Destination);
             Destination = Path.Combine(Destination, fileInfo.Name);
             if (File.Exists(Destination)){
                 try { 
@@ -59,7 +60,7 @@ namespace SSA.VirtualFileSystem
                 } catch (Exception e) {
                     string exceptionstring = string.Format("Caught exception disabling duplicate file: {0}\nException: {1}", fileInfo.Name, e.Message);
                     System.Windows.Forms.MessageBox.Show(exceptionstring);
-                    GetException(e, exceptionstring, fileInfo.Directory);
+                    GetException(e, exceptionstring, destinfo.Directory);
                 }
             }
             try {
@@ -67,11 +68,12 @@ namespace SSA.VirtualFileSystem
             } catch (Exception e) {
                 string exceptionstring = string.Format("Caught exception making symbolic link: {0}\nException: {1}", fileInfo.Name, e.Message);
                 System.Windows.Forms.MessageBox.Show(exceptionstring);
-                GetException(e, exceptionstring, fileInfo.Directory);
+                GetException(e, exceptionstring, destinfo.Directory);
             }            
         }
 
         public void MakeSymbolicLink(string Original, string Destination, string AsName){
+            FileInfo destinfo = new(Destination);
             FileInfo fileInfo = new(Original);
             Destination = Path.Combine(Destination, AsName);
             if (File.Exists(Destination)){
@@ -80,7 +82,7 @@ namespace SSA.VirtualFileSystem
                 } catch (Exception e) {
                     string exceptionstring = string.Format("Caught exception disabling duplicate file: {0}\nException: {1}", fileInfo.Name, e.Message);
                     System.Windows.Forms.MessageBox.Show(exceptionstring);
-                    GetException(e, exceptionstring, fileInfo.Directory);
+                    GetException(e, exceptionstring, destinfo.Directory);
                 }
             }
             try {
@@ -88,7 +90,7 @@ namespace SSA.VirtualFileSystem
             } catch (Exception e) {
                 string exceptionstring = string.Format("Caught exception making symbolic link: {0}\nException: {1}", fileInfo.Name, e.Message);
                 System.Windows.Forms.MessageBox.Show(exceptionstring);
-                GetException(e, exceptionstring, fileInfo.Directory);
+                GetException(e, exceptionstring, destinfo.Directory);
             }
             
         }
@@ -116,7 +118,8 @@ namespace SSA.VirtualFileSystem
             }
         }
 
-        public void MakeJunction(string Original, string Destination){
+        public void MakeJunction(string Original, string Destination){            
+            DirectoryInfo destinfo = new(Destination);
             DirectoryInfo directoryInfo = new(Original);
             Destination = Path.Combine(Destination, directoryInfo.Name);
             if (Directory.Exists(Destination)){
@@ -125,7 +128,7 @@ namespace SSA.VirtualFileSystem
                 } catch (Exception e) {
                     string exceptionstring = string.Format("Caught exception disabling duplicate folder: {0}\nException: {1}", directoryInfo.Name, e.Message);
                     System.Windows.Forms.MessageBox.Show(exceptionstring);
-                    GetException(e, exceptionstring, directoryInfo);
+                    GetException(e, exceptionstring, destinfo);
                 }
             }
             try {
@@ -133,7 +136,7 @@ namespace SSA.VirtualFileSystem
             } catch (Exception e) {         
                 string exceptionstring = string.Format("Caught exception making junction: {0}\nException: {1}", directoryInfo.Name, e.Message);
                 System.Windows.Forms.MessageBox.Show(exceptionstring);
-                GetException(e, exceptionstring, directoryInfo);
+                GetException(e, exceptionstring, destinfo);
             }
         }
 
