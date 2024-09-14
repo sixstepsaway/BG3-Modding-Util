@@ -1,3 +1,6 @@
+# THIS IS ALMOST CERTAINLY OUT OF DATE AFTER THE UPDATES LARIAN HAVE RECENTLY PUSHED. I'LL TRY AND FIX IT AT SOME POINT, BUT I HAVEN'T PLAYED BG3 IN AGES. SORRY.
+
+
 
 I made this for a friend in like eight hours before we played so we'd have the same BG3 modded setup for one game, but be able to continue playing our vanilla game vanilla. I figured it might be useful for someone else too for similar reasons. Please read instructions on how to use it, or it won't work!
 
