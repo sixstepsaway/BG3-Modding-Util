@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="BG3ModdingUtil.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BG3ModdingUtil.Views"
+             xmlns:vm="clr-namespace:BG3ModdingUtil.ViewModels"
+             xmlns:adonisUi="clr-namespace:AdonisUI;assembly=AdonisUI"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="350" d:DesignWidth="500">
+    <UserControl.DataContext>
+        <vm:SettingsViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        
+        <Grid Grid.Row="1" Margin="5,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Mods Folder: " Margin="0,3,0,0"/>
+            <TextBox Grid.Column="1" Margin="5,0,0,0"  Width="350" Text="{Binding ModsFolder, Mode=TwoWay}"/>
+        </Grid>
+        <Grid Grid.Row="2" Margin="5,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="BG3 Install Folder: " Margin="0,3,0,0"/>
+            <TextBox Grid.Column="1" Margin="5,0,0,0"  Width="350" Text="{Binding Bg3SteamFolder, Mode=TwoWay}"/>
+        </Grid>
+        <Grid Grid.Row="3" Margin="5,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" Content="Include Reshade on Vanilla" Margin="0,3,0,0"/>
+        </Grid>
+        <Grid Grid.Row="4" Margin="5,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0" Content="Include Party Size and Camera in Vanilla (Includes Reshade)" Margin="0,3,0,0"/>
+        </Grid>
+
+        <Button Grid.Row="5" Content="Save" Command="{Binding SaveSettingsCommand}" Margin="10" Width="70" Style="{DynamicResource {x:Static adonisUi:Styles.AccentButton}}"/>
+
+
+    </Grid>
+</UserControl>
